@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.user-bar {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+}
+.user-bar ul {
+  list-style: none;
+}
+.user-bar ul li {
+  padding: 10px;
+  display: inline-block;
+}
+.profile {
+  list-style: none;
+  display: flex;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-around;
+  text-align: center;
+  margin-left: 20px;
+}
+.nav {
+  flex: 1;
+  text-align: center;
+}
+nav ul {
+  display: inline-block;
+  margin-left: 50px;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 60px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.left {
+  /*This is First div content*/
+  margin-left: 0px;
+  background-color: white;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Trirong", serif;
+  border-style: ridge;
+  padding: 30px;
+}
+.Parent {
+  display: flex;
+  border-style: ridge;
+}
+.cards {
+  object-fit: cover;
+  margin: 0px;
+  font-family: "Trirong", serif;
+  border-style: ridge;
+}
+.down {
+  font-family: "Times New Roman", Times, serif;
+  flex-wrap: wrap;
+}
+.right {
+  /* display: flex; */
+  display: grid;
+  /* flex-wrap: wrap; */
+  /* float: left; */
+  width: 100px;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: auto;
+  grid-gap: 32px;
+  border-style: ridge;
+  border: 200px;
+}
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+}

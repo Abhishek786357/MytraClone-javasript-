@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-Commerce.</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Trirong"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar" id="navbar1 ">
+      <div class="logo">
+        <img src="/images/logo.png" width="100px" />
+      </div>
+      <nav class="Menu">
+        <ul>
+          <li>
+            <a href="#"><h2>MEN</h2></a>
+          </li>
+          <li>
+            <a href="#"><h2>WOMEN</h2></a>
+          </li>
+          <li>
+            <a href="#"><h2>KIDS</h2></a>
+          </li>
+          <li>
+            <a href="#"><h2>HOME & LIVING</h2></a>
+          </li>
+          <li>
+            <a href="#"><h2>BEAUTY</h2></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <input
+        type="search"
+        placeholder="Search for Products & more "
+         
+      /> <button type="submit"><i class="fa fa-search"></i></button> -->
+
+      <div id="searchBar">
+        <input type="text" placeholder="Search.." name="search2" id="search" />
+
+        <button type="submit" onclick="mySearch()" style="color: blue; width: 50px;"> <i class="fa fa-search"></i></button>
+      </div>
+
+
+
+    <div class="user-bar">
+
+      <ul >
+        <li><i class="far fa-user"></i>Profile</li>
+        
+        <li><i class="fas fa-shopping-bag"></i>Wishlist</li>
+        
+          <li><i class="far fa-heart"></i>Bag</li></>
+      </ul>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="Parent">
+      <!-- parent division -->
+      <div class="left">
+        <!-- first div -->
+        <hr />
+        <div class="filter" id="gender">
+          <h3>FILTERS</h3>
+          <br />
+          <ul>
+            <input type="radio" name="gender" />Men<br />
+            <!-- <input type="radio" name="gender" />Women<br />
+            <input type="radio" name="gender" />Unisex<br />
+            <input type="radio" name="gender" />Girls<br />
+            <input type="radio" name="gender" />Boys<br /> -->
+          </ul>
+        </div>
+
+        <br />
+        <hr />
+        <!-- second -->
+        <div class="catagery" id="CategoryId">
+          <h3>CATEGORIES</h3>
+          <br />
+          <input type="checkbox" />Watches<br />
+          <!-- <input type="checkbox" />Jeans<br />
+          <input type="checkbox" />Flip Flop<br />
+          <input type="checkbox" />Kurtas sets<br />
+          <input type="checkbox" />casual shoes<br />
+          <input type="checkbox" />Kurtas<br />
+          <input type="checkbox" />Jackets<br />
+          <input type="checkbox" />Shirts<br />
+          <input type="checkbox" />FitnessBands<br />
+          <input type="checkbox" />T-Shirts<br />
+          <input type="checkbox" />Clothing sets<br />
+          <input type="checkbox" />Jumpsuit<br />
+          <input type="checkbox" />Track Pants<br />
+          <input type="checkbox" />HeadPhones<br /> -->
+        </div>
+        <div id="brandId">
+          <h3>Brands</h3>
+          <input type="checkbox" />Puma<br />
+          <input type="checkbox" />Nike<br />
+          <input type="checkbox" />Jordan<br />
+          <input type="checkbox" />Tommy<br />
+        </div>
+      </div>
+      <!-- -------------------------------------Right Child------------------ -->
+      <div class="right" id="KK">
+        <div class="cards">
+          <div class="down">
+            <h4>Deniel</h4>
+            <p>De</p>
+            <b>Rs.1125.</b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/dab982e62b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>
