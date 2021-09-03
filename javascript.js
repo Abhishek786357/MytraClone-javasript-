@@ -2,10 +2,10 @@ fetch("https://run.mocky.io/v3/bf175661-5e9f-4112-8580-d587759ff72e")
   .then((apiData) => apiData.json())
   .then((data) => data.products)
   .then((data) => {
-    cards(data);
+    productCards(data);
     gender(data);
-    Category(data);
-    Brands(data);
+    category(data);
+    brands(data);
     saveData(data);
     categoryFilter(data);
     brandFilter(data);
