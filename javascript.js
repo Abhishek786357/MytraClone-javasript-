@@ -69,13 +69,13 @@ const brands = (data) => {
 
 const categories = (data) => {
   var cateVar = document.getElementById("CategoryId");
-  var cateArr = [];
+  var catArr = [];
   data.forEach((elem) => {
-    cateArr.push(elem["category"]);
+    catArr.push(elem["category"]);
   });
-  var CategoryData = new Set(cateArr);
+  var categoryData = new Set(catArr);
   var categoryHtml = `<h3>CATEGORIES</h3>`;
-  for (let element of CategoryData) {
+  for (let element of categoryData) {
     categoryHtml += ` <input type="checkbox" name="category" onclick="categoryFilter()" value=${element}>${element}<br />`;
   }
   cateVar.innerHTML = categoryHtml;
