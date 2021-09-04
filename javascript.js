@@ -2,9 +2,9 @@ fetch("https://run.mocky.io/v3/bf175661-5e9f-4112-8580-d587759ff72e")
   .then((apiData) => apiData.json())
   .then((data) => data.products)
   .then((data) => {
-    productCards(data);
+     productCards(data);
     gender(data);
-    category(data);
+    categories(data);
     brands(data);
     saveData(data);
     categoryFilter(data);
@@ -15,8 +15,8 @@ const saveData = (data) => {
   productData = data;
 };
 
-/*CARDS SECTION---------------------- */
-var cards = (data) => {
+/* productCards SECTION---------------------- */
+var  productCards = (data) => {
   var cardData = document.getElementById("KK");
   var htmlContent = [];
   data.forEach((elem) => {
@@ -32,28 +32,28 @@ var cards = (data) => {
 
 /*Gender Section -------------------------------------- */
 const gender = (data) => {
-  var GenName = document.getElementById("gender");
-  var Gen_data = [];
-  data.forEach((gen_der) => {
-    Gen_data.push(gen_der["gender"]);
+  var genName = document.getElementById("gender");
+  var genArr = [];
+  data.forEach((genderPara) => {
+    genArr.push(genderPara["gender"]);
   });
-  var Gender_Data = new Set(Gen_data);
-  var gen_html = `<h3>FILTERS</h3>`;
-  for (let i of Gender_Data) {
-    gen_html += ` <input type="radio" name="gender" value=${i} onclick="genderFilter()" >${i}<br />`;
+  var mySet = new Set(genArr);
+  var genHtml = `<h3>FILTERS</h3>`;
+  for (let i of mySet) {
+    genHtml += ` <input type="radio" name="gender" value=${i} onclick="genderFilter()" >${i}<br />`;
   }
-  GenName.innerHTML = gen_html;
+  genName.innerHTML = genHtml;
 };
 function genderFilter() {
   var genderVal = document.querySelector('input[name="gender"]:checked').value;
   var data = productData.filter((radioData) => radioData.gender === genderVal);
   console.log(data);
-  cards(data);
+   productCards(data);
 }
 
 /* Brand Section -----------------------------------------*/
-const Brands = (data) => {
-  var brand_content = document.getElementById("brandId");
+const brands = (data) => {
+  var brandContent = document.getElementById("brandId");
   var brName = [];
   data.forEach((ro) => {
     brName.push(ro["brand"]);
@@ -63,22 +63,22 @@ const Brands = (data) => {
   for (let element of brandName) {
     htmlContent += `<input type="checkbox" name="brand" onclick="brandFilter()" value= ${element}>${element}<br />`;
   }
-  brand_content.innerHTML = htmlContent;
+  brandContent.innerHTML = htmlContent;
 };
 /* Category Section----------------*/
 
-const Category = (data) => {
-  var cate_gory = document.getElementById("CategoryId");
-  var Cate_data = [];
+const categories = (data) => {
+  var cateVar = document.getElementById("CategoryId");
+  var cateArr = [];
   data.forEach((elem) => {
-    Cate_data.push(elem["category"]);
+    cateArr.push(elem["category"]);
   });
-  var CategoryData = new Set(Cate_data);
+  var CategoryData = new Set(cateArr);
   var categoryHtml = `<h3>CATEGORIES</h3>`;
   for (let element of CategoryData) {
     categoryHtml += ` <input type="checkbox" name="category" onclick="categoryFilter()" value=${element}>${element}<br />`;
   }
-  cate_gory.innerHTML = categoryHtml;
+  cateVar.innerHTML = categoryHtml;
 };
 function categoryFilter() {
   var cateVal = document.querySelectorAll('input[name="category"]:checked');
@@ -96,7 +96,7 @@ function categoryFilter() {
   });
   console.log(resultCate);
 
-  resultCate.length !== 0 ? cards(resultCate) : cards(productData);
+  resultCate.length !== 0 ?  productCards(resultCate) :  productCards(productData);
 }
 
 function brandFilter() {
@@ -112,7 +112,7 @@ function brandFilter() {
       productData.filter((product) => product.brand.includes(val))
     );
   });
-  resultBrand.length !== 0 ? cards(resultBrand) : cards(productData);
+  resultBrand.length !== 0 ?  productCards(resultBrand) :  productCards(productData);
 }
 
 // };
@@ -121,5 +121,5 @@ function mySearch() {
   var searchResult = productData.filter((searchItem) =>
     searchItem.product.toUpperCase().includes(searchKeyword)
   );
-  cards(searchResult);
+   productCards(searchResult);
 }
